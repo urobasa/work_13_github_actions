@@ -9,9 +9,9 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-#    defaults:
-#     run:
-#      working-directory: django_forms_and_shabl/myproject
+    defaults:
+     run:
+      working-directory: myproject
     services:
       redis:
         image: redis
@@ -46,10 +46,9 @@ jobs:
         poetry install --no-interaction --no-root
 
     - name: Run tests
-      working-directory: django_forms_and_shabl/myproject
       env:
         DJANGO_SETTINGS_MODULE: myproject.settings
         CELERY_BROKER_URL: redis://localhost:6379/0
         DATABASE_URL: postgres://postgres:postgres@localhost:5432/test_db
       run: |
-        poetry run pytest
+        poetry run pytest -v --rootdir=myproject
