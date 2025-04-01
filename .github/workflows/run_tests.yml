@@ -9,8 +9,8 @@ on:
 jobs:
   test:
     runs-on: ubuntu-latest
-    defaults:
-     run:
+#    defaults:
+#     run:
 #      working-directory: django_forms_and_shabl/myproject
     services:
       redis:
