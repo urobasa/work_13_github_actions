@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
      run:
-      working-directory: django_forms_and_shabl/myproject
+#      working-directory: django_forms_and_shabl/myproject
     services:
       redis:
         image: redis
@@ -43,6 +43,7 @@ jobs:
         poetry install --no-interaction --no-root
 
     - name: Run tests
+      working-directory: django_forms_and_shabl/myproject
       env:
         DJANGO_SETTINGS_MODULE: myproject.settings
         CELERY_BROKER_URL: redis://localhost:6379/0
