@@ -11,7 +11,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
      run:
-      working-directory: ./django_forms_and_shabl/myproject
+      working-directory: django_forms_and_shabl/myproject
     services:
       redis:
         image: redis
