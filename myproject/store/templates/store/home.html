@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Главная страница{% endblock %}
+
+{% block content %}
+<div class="jumbotron">
+    <h1 class="display-4">Добро пожаловать в магазин!</h1>
+    <p class="lead">Здесь вы можете найти различные категории и продукты.</p>
+    <hr class="my-4">
+    <p>Используйте кнопки ниже для навигации.</p>
+    <a class="btn btn-primary btn-lg" href="{% url 'category_list' %}" role="button">Категории</a>
+    <a class="btn btn-success btn-lg" href="{% url 'product_list' %}" role="button">Продукты</a>
+</div>
+{% endblock %}
+

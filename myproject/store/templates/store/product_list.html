@@ -1,0 +1,16 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Продукты{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Список продуктов</h1>
+<ul class="list-group">
+    {% for product in products %}
+        <li class="list-group-item">
+            <a href="{% url 'product_detail' product.id %}">{{ product.name }}</a> - {{ product.price }} руб.
+        </li>
+    {% endfor %}
+</ul>
+<a href="{% url 'category_list' %}" class="btn btn-secondary mt-3">Вернуться к списку категорий</a>
+{% endblock %}
+

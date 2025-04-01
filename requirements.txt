@@ -1,0 +1,8 @@
+django
+pytest
+pytest-django
+redis
+celery
+psycopg2-binary
+pytest-cov
+

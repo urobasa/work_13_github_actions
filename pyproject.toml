@@ -1,0 +1,21 @@
+[tool.poetry]
+name = "homework_07"
+version = "0.1.0"
+description = ""
+authors = ["Вячеслав Родионов <v.rodionov@arenadata.io>"]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+Django = "^5.1.6"
+pytest = "^8.3.5"
+pytest-django = "^4.10.0"
+celery = "^5.4.0"
+redis = "^5.2.1"
+pytest-cov = "^6.0.0"
+
+[tool.poetry.dev-dependencies]
+pytest-cov = "^6.0.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

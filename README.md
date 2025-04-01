@@ -1,0 +1,4 @@
+# django_extend_admin_and_views_and_forms_and_shabl_and_tests_and_celery_and_redis
+
+Github Actions run django tests
+

@@ -1,0 +1,15 @@
+{% extends 'store/base.html' %}
+
+{% block title %}Категории{% endblock %}
+
+{% block content %}
+<h1 class="mb-4">Список категорий</h1>
+<ul class="list-group">
+    {% for category in categories %}
+        <li class="list-group-item">
+            <a href="{% url 'category_detail' category.id %}">{{ category.name }}</a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}
+
